@@ -3,18 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to UC San Diego User Analysis Facility Docs's documentation!
+Welcome to UC San Diego User Analysis Facility documentation!
 ====================================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   
+   requesting_account
+   setting_up_voms
