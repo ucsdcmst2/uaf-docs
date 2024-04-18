@@ -7,8 +7,13 @@ Welcome to UC San Diego User Analysis Facility documentation!
 ====================================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 7
    :caption: Contents:
    
    requesting_account
+   setting_up_home
    setting_up_voms
+   ceph
+   condor
+   using_docker
+   jupyterhub
