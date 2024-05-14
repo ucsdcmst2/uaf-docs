@@ -15,5 +15,6 @@ Welcome to UC San Diego User Analysis Facility documentation!
    setting_up_voms
    ceph
    condor
+   old_vs_new
    using_docker
    jupyterhub
