@@ -1,0 +1,41 @@
+site_name: UC San Diego User Analysis Facility (UAF)
+theme:
+  name: material
+  palette:
+    - primary: custom
+      accent: custom
+  logo: assets/ucsd.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+nav:
+  - Requesting an Account: "requesting_account.md"
+  - Quick Start:
+      - Setting up Home: "setting_up_home.md"
+      - Setting up VOMS: "setting_up_voms.md"
+      - Using HTCondor: "condor.md"
+  - CEPH:
+      - CEPH Overview: "ceph.md"
+  - Jupyter:
+      - Jupyter Overview: "jupyterhub.md"
+  - Other:
+      - Old vs New UAFs: "old_vs_new.md"
+      - Docker: "using_docker.md"
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
