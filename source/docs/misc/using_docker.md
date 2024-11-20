@@ -2,7 +2,7 @@
 
 Want to test an application without installing all the dependencies on your system? How about Containers?
 
-![Docker Comic](assets/docker.jpg)
+![Docker Comic](../assets/docker.jpg)
 
 Docker is a container engine that provides a command-line interface for managing containers and images. UAFs do not give you access to Docker, we instead use Podman which is an alternative to Docker and offers a rootless, lightweight and secure container runtime environment. To maintain familiarity, the 'docker' command these machines is aliased to 'podman', ensuring users can use their usual Docker commands seamlessly.
 
@@ -17,10 +17,22 @@ By default, the image storage directory for your podman profile is set to \$HOME
     $ mkdir -p /data/userdata/${USER}
     $ mkdir /data/userdata/${USER}/docker
     ```
-2) You can now create a symlink to the image storage directory using
+
+   Note: You will have to repeat this on every UAF when you log in as this file is local the that UAF
+
+2) You can now create a symlink to the image storage directory in the NVMe, make sure to delete the old one if it exists.
+    ```
+    $ rm -rf $HOME/.local/share/containers/storage
+    ```
+or if the above did not exist run
+    ```
+    $ mkdir -p $HOME/.local/share/containers/
+    ```
+then
     ```
     $ ln -s /data/userdata/${USER}/docker $HOME/.local/share/containers/storage
     ```
+
 3) Verify that the symlink was created by running `ls -l $HOME/.local/share/containers`, the output should look like
     ```
     [0356] aaarora@uaf-2 ~$ ls -l $HOME/.local/share/containers

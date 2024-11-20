@@ -1,1 +1,0 @@
-# Using the HTCondor Batch Submission System (WIP)
