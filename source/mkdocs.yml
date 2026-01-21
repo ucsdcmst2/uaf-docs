@@ -1,30 +1,41 @@
-site_name: UC San Diego User Analysis Facility (UAF)
+site_name: Users Analysis Facility (UAF) Documentation
+
 theme:
-  name: material
-  palette:
-    - primary: custom
-      accent: custom
+  name: readthedocs
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   logo: assets/ucsd.png
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+
 nav:
-  - Requesting an Account: "requesting_account.md"
-  - Quick Start:
-      - Setting up Home: "setting_up_home.md"
-      - Setting up VOMS: "setting_up_voms.md"
-      - Using HTCondor: "condor.md"
-  - CEPH:
-      - CEPH Overview: "ceph.md"
-  - Jupyter:
-      - Jupyter Overview: "jupyterhub.md"
-  - Other:
-      - Old vs New UAFs: "old_vs_new.md"
-      - Docker: "using_docker.md"
+  - Home: "index.md"
+  - Quick Start: 
+      - Requesting an Account: "quickstart/requesting_account.md"
+      - Accessing the UAF: "quickstart/accessing_uaf.md"
+      - Access to XRootD Cluster: "quickstart/xrootd.md"
+  - Setting up your Workspace:
+      - Setting up Home: "setup/setting_up_home.md"
+      - Setting up VOMS: "setup/setting_up_voms.md"
+      - Using HTCondor: "setup/condor.md"
+      - Using CEPH: "setup/ceph.md"
+  - Miscellaneous:
+      - Running RHEL7 Workflows: "misc/running_rhel7.md"
+      - Rucio: "misc/using_rucio.md"
+      - Docker: "misc/using_docker.md"
+      - JupyterHub @ UCSD: "misc/jupyterhub.md"
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 markdown_extensions:
   - admonition
@@ -39,3 +50,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+
+
+exclude_docs: |
+  *~
+
+copyright: UCSD High Energy Physics &copy; 2024

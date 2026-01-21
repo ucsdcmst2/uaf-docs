@@ -1,3 +1,0 @@
-# Jupyterhub @ UCSD
-
-## Coming Soon!
