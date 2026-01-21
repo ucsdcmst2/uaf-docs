@@ -25,9 +25,6 @@ $HOME/
 │   └── project2/
 ├── data/              # Small, local datasets (use /ceph for large data)
 ├── public_html/       # Web-accessible files
-├── software/          # Custom software installations
-├── classes/           # Coursework (if applicable)
-└── cron/              # Scripts for crontab jobs (e.g. proxy renewal)
 ```
 
 You can create this structure with:
@@ -90,26 +87,13 @@ The `.bashrc` file in your home directory controls your shell environment. Here'
 
 ```bash
 # Create or edit your .bashrc
-nano $HOME/.bashrc
+vim $HOME/.bashrc
 ```
-
-Add these useful configurations to set up your environment automatically on login:
 
 ```bash
 # User specific aliases and functions
-
 # Source CMS Environment
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-
-# CMSSW convenience
-alias cmsenv='eval `scramv1 runtime -sh`'
-
-# Editor preference (avoid getting stuck in vi)
-export EDITOR=nano
-
-# Path additions
-export PATH=$HOME/scripts:$PATH
-```
 
 # Set useful aliases
 alias llt='ls -lrth'
@@ -117,15 +101,15 @@ alias condor_q_me='condor_q $USER'
 alias cdcms='cd /ceph/cms/store/user/$USER/'
 
 # Add custom bin directory to PATH
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] ; then
+    export PATH="$HOME/.local/bin:$PATH"
 fi
 
 # Set a more informative prompt
 export PS1='\[\e[1;32m\]\u@\h \[\e[1;34m\]\w \[\e[1;31m\]$ \[\e[0m\]'
 
 # Set default editor
-export EDITOR=nano
+export EDITOR=vim
 
 # Proxy management
 alias gridproxy='voms-proxy-init --voms cms --valid 192:00'
@@ -160,9 +144,6 @@ For efficient home directory management:
    ```bash
    # Compress a directory of logs
    tar -czvf logs_archive.tar.gz logs/
-   ```
-   ```
-   http://uaf-2.t2.ucsd.edu/~yourusername/image.png
    ```
 
 Note: Just like your home directory, the public_html directory is shared across the UAFs

@@ -1,4 +1,6 @@
-# JupyterHub at UCSD CMS T2
+# Analysis Facility at UCSD CMS T2
+
+# (Work in Progress)
 
 ## Interactive Data Analysis with JupyterHub
 
@@ -12,22 +14,22 @@ JupyterHub provides a powerful web-based interactive computing environment for d
 
 ### Accessing UCSD T2 JupyterHub
 
-1. **Navigate to the JupyterHub portal**: 
+1. **Navigate to the JupyterHub portal**:
    [https://jupyter.t2.ucsd.edu](https://jupyter.t2.ucsd.edu)
 
-2. **Authentication**: 
-   - Log in with your UCSD credentials
-   - For CMS users, select the "CERN" authentication option
+2. **Authentication**:
+    - Log in with your UCSD credentials
+    - For CMS users, select the "CERN" authentication option
 
 3. **Select an Environment**:
-   - **CMS Data Analysis**: Pre-configured with CMSSW, ROOT, and common HEP packages
-   - **Machine Learning**: TensorFlow, PyTorch, and GPU support
-   - **General Purpose**: Python scientific stack with plotting libraries
+    - **CMS Data Analysis**: Pre-configured with CMSSW, ROOT, and common HEP packages
+    - **Machine Learning**: TensorFlow, PyTorch, and GPU support
+    - **General Purpose**: Python scientific stack with plotting libraries
 
 4. **Resource Allocation**:
-   - Choose CPU, memory, and GPU resources based on your analysis needs
-   - Standard users can access up to 8 CPU cores and 32GB memory
-   - GPU access requires justification and approval
+    - Choose CPU, memory, and GPU resources based on your analysis needs
+    - Standard users can access up to 8 CPU cores and 32GB memory
+    - GPU access requires justification and approval
 
 ### Accessing Your Data in JupyterHub
 

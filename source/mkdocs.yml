@@ -32,7 +32,7 @@ nav:
       - Running RHEL7 Workflows: "misc/running_rhel7.md"
       - Rucio: "misc/using_rucio.md"
       - Docker: "misc/using_docker.md"
-      - JupyterHub @ UCSD: "misc/jupyterhub.md"
+      - AF @ UCSD: "misc/analysis_facility.md"
 
 extra_css:
   - assets/stylesheets/extra.css
